@@ -1,0 +1,23 @@
+/*=====================
+Theme Name: Wordpress Learning test again
+Theme URI: #
+Version: 1.0.0
+Author: Anik Roy
+Author URI: https://voluble-buttercream-2da6d9.netlify.app/
+Text Domain: anikroy
+Requires at least: 5.9
+Tested up to: 6.0
+Requires PHP: 5.6
+Description: Now, I am learning wordpress theme devleopment, I hope it will be more fun.
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=======================*/
+
+body {
+    background: #000;
+}
+
+h2 {
+    color: blue;
+}
