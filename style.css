@@ -13,11 +13,3 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 =======================*/
-
-body {
-    background: #000;
-}
-
-h2 {
-    color: blue;
-}

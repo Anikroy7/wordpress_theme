@@ -2,62 +2,58 @@
 /* 
 *This templete for diplaying the header
 */
+get_header();
 ?>
 
-<!DOCTYPE html>
-<html lang="<?php language_attributes() ?>" class="no-js">
 
-<head>
-    <meta charset="<?php bloginfo('charset') ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head() ?>
-</head>
-
-<body class="" <?php body_class() ?>>
-    <div id="header_area">
-        <div class="row">
-            <div class="col-md-3">
-                <a href="">
-                    <img src="<?php echo get_theme_mod('anik_logo'); ?>" alt="">
-                </a>
-            </div>
-            <div class="col-md-9">
-                <ul id="nav">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Midea</a></li>
-                    <li><a href="">Download</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Services</a>
-                        <ul>
-                            <li><a href="">Dropdown menu</a></li>
-                            <li><a href="">Dropdown menu</a></li>
-                            <li><a href="">Dropdown menu</a></li>
-                            <li><a href="">Dropdown menu</a></li>
-                            <li><a href="">Dropdown menu</a></li>
-                            <li>
-                                <a href="">Dropdown menu</a>
-                                <ul>
-                                    <li><a href="">Dropdown menu</a></li>
-                                    <li><a href="">Dropdown menu</a></li>
-                                    <li><a href="">Dropdown menu</a></li>
-                                    <li><a href="">Dropdown menu</a></li>
-                                    <li><a href="">Dropdown menu</a></li>
-                                    <li><a href="">Dropdown menu</a>
-                                </ul>
-
-                            </li>
-                    </li>
-                </ul>
-                </li>
-                </ul>
+<!-- This is body area -->
+<section>
+    <div id="body_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <?php
+                    if (have_posts()) {
+                        while (have_posts()) : the_post();
+                    ?>
+                            <div class="blog_area">
+                                <div class="post_thumb">
+                                    <a target="_blank" href="<?php the_permalink(); ?>">
+                                        <?php echo the_post_thumbnail('post-thumbnails'); ?>
+                                    </a>
+                                </div>
+                                <div class="post_details">
+                                    <h2><a target="_blank" href="<?php the_permalink();  ?>">
+                                            <?php the_title();   ?>
+                                        </a></h2>
+                                    <?php the_excerpt(); ?>
+                                </div>
+                            </div>
+                    <?php
+                        endwhile;
+                    } else {
+                        echo ("No Post Found!!");
+                    }
+                    ?>
+                    <div id="page_nav">
+                        <?php if ('anik_pagenav') {
+                            anik_pagenav();
+                        } else { ?>
+                            <?php next_post_link() ?>
+                            <?php previous_post_link() ?>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h2>This is sidebar</h2>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+</section>
 
-    <?php wp_footer() ?>
-</body>
 
-</html>
+<!-- Footer Area Start -->
+<?php
+get_footer()
+?>

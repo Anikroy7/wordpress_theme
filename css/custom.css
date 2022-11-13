@@ -2,17 +2,21 @@
 *This is our custom css
 */
 
-img {
-    width: 200px;
-    height: 100px;
-    margin-left: 100px;
-}
 
 /*=======================================
  Common CSS
 ========================================*/
 body {
-    font-family: "Kaisei Decol", serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+
 }
 
 h1,
@@ -24,6 +28,44 @@ h6 {
     font-family: "Oswald", sans-serif;
     line-height: 1.5em;
 }
+
+img {
+    max-width: 100%;
+}
+
+
+a.readmore {
+    background: #ea1a70;
+    color: white;
+    display: inline;
+    padding: 10px;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.readmore:hover {
+    background: #510524;
+
+}
+
+/*=======================================
+   Notice Area Style
+  ========================================*/
+
+#notice {
+    background-color: #f1f3d3;
+}
+
+#notice p {
+    margin: 0;
+    padding: 10px 0;
+    color: #490909;
+    text-align: center;
+    font-weight: 500;
+}
+
+
 
 /*=======================================
    Header Area Style
@@ -37,8 +79,8 @@ h6 {
     margin: 10px 0 0;
     padding: 0;
     list-style: none;
-    text-align: right;
-    margin-right: 200px;
+
+
 }
 
 #header_area .col-md-9 ul li {
@@ -54,6 +96,13 @@ h6 {
     text-decoration: none;
 }
 
+#header_area .col-md-9 ul li span {
+    display: block;
+    color: rgb(46, 223, 78);
+    font-size: 15px;
+}
+
+
 #header_area .col-md-9 ul li a:hover {
     background: #ea1a70;
     color: #fff;
@@ -68,6 +117,7 @@ h6 {
     text-align: left;
     top: 62px;
     width: 200px;
+    z-index: 999999;
 }
 
 #header_area .col-md-9 ul li:hover ul {
@@ -126,4 +176,150 @@ h6 {
 #header_area .col-md-9 ul ul li ul li a:hover {
     background: #ea1a70;
     color: #fff;
+}
+
+
+/*------------------==== Header area css */
+
+/* For left menu */
+#header_area.left_menu .col-md-3 {
+
+    order: 2;
+}
+
+#header_area.left_menu .col-md-9 {
+
+    order: 1;
+}
+
+#header_area.left_menu .col-md-9 ul {
+    text-align: left;
+}
+
+/* For center */
+#header_area.center_Menu .col-md-3 {
+    width: 100%;
+}
+
+#header_area.center_Menu .col-md-9 {
+    width: 100%;
+}
+
+#header_area.center_Menu .col-md-9 ul ul {
+    text-align: left;
+}
+
+
+/* Index page style */
+
+#body_area {
+    padding: 45px 0;
+
+}
+
+#body_area .blog_area {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#body_area .post_thumb {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#body_area .post_thumb img {
+    transition: 0.5s;
+    width: 100%;
+    display: block;
+}
+
+#body_area .post_thumb:hover img {
+    transform: scale(1.1);
+}
+
+#body_area .post_details {
+    width: 100%;
+
+}
+
+#body_area .post_details h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#body_area .post_details h2 a {
+    color: #262626;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#body_area .post_details h2 a:hover {
+    color: #ea1a70;
+
+}
+
+/* 
+===========================
+Navigation  Area Css
+============================
+*/
+
+#page_nav p.pages {
+    background-color: #ea1a70;
+    color: #ffffff;
+    padding: 10px 5px;
+}
+
+#page_nav p.pages span {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+
+#page_nav .page-numbers {
+    background: #ea1a70;
+    color: #ffffff;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-right: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#page_nav .page-numbers.current,
+#page_nav .page-numbers:hover {
+    background-color: #510524
+}
+
+/* 
+===========================
+Footer Area Css
+============================
+*/
+
+
+#footer_area {
+    background-color: #4b4b4e;
+    color: #ddd;
+    padding: 20px 0;
+}
+
+#footer_area p {
+    margin: 0;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#footer_area a {
+    color: #ea1a70;
+
+}
+
+#footer_area a {
+    color: #fffdfe;
+    text-decoration: underline;
+
 }
