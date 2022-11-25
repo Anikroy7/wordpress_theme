@@ -6,6 +6,10 @@
 /*=======================================
  Common CSS
 ========================================*/
+:root {
+    --pink: #ea1a70;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
@@ -35,7 +39,7 @@ img {
 
 
 a.readmore {
-    background: #ea1a70;
+    background: var(--pink);
     color: white;
     display: inline;
     padding: 10px;
@@ -72,6 +76,12 @@ a.readmore:hover {
   ========================================*/
 #header_area {
     padding: 15px 0;
+    box-shadow: 0px 0px 15px #ddd;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background: rgb(255, 255, 255);
 }
 
 #header_area .col-md-9 ul {
@@ -79,8 +89,6 @@ a.readmore:hover {
     margin: 10px 0 0;
     padding: 0;
     list-style: none;
-
-
 }
 
 #header_area .col-md-9 ul li {
@@ -139,8 +147,7 @@ a.readmore:hover {
 }
 
 #header_area .col-md-9 ul li:hover a {
-    background: #ea1a70;
-    color: #fff;
+    background: var(--pink) color: #fff;
 }
 
 #header_area .col-md-9 ul li:hover ul li a {
@@ -164,7 +171,7 @@ a.readmore:hover {
 }
 
 #header_area .col-md-9 ul li ul li:hover a {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
 }
 
@@ -174,13 +181,12 @@ a.readmore:hover {
 }
 
 #header_area .col-md-9 ul ul li ul li a:hover {
-    background: #ea1a70;
+    background: var(--pink);
     color: #fff;
 }
 
 
-/*------------------==== Header area css */
-
+/*------------- Header area css --------------*/
 /* For left menu */
 #header_area.left_menu .col-md-3 {
 
@@ -220,6 +226,9 @@ a.readmore:hover {
 #body_area .blog_area {
     width: 100%;
     margin-bottom: 15px;
+    background-color: #f6f4f5;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #ddd;
 }
 
 #body_area .post_thumb {
@@ -240,7 +249,7 @@ a.readmore:hover {
 
 #body_area .post_details {
     width: 100%;
-
+    overflow: hidden;
 }
 
 #body_area .post_details h2 {
@@ -259,6 +268,100 @@ a.readmore:hover {
     color: #ea1a70;
 
 }
+
+/* 
+===========================
+Archive Area Css
+============================
+*/
+
+#archive_title,
+#search_title {
+    background: #ea1a70;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+    z-index: 5;
+}
+
+
+/* Search title */
+
+
+
+/* 
+===========================
+Sidebar  Area Css
+============================
+*/
+
+#body_area .child_sidebar {
+    margin-bottom: 20px;
+}
+
+#body_area .child_sidebar h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
+#body_area .child_sidebar input[type='search'] {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#body_area .child_sidebar button[type='submit'] {
+    background-color: #ea1a70;
+    padding: 10px;
+    border: 0;
+    color: white;
+    margin: 0;
+    transition: 0.5s;
+}
+
+#body_area .child_sidebar button[type='submit']:hover {
+    background-color: #730633;
+}
+
+#body_area .child_sidebar ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#body_area .child_sidebar ul li a {
+    color: #262626;
+    text-decoration: none;
+}
+
+#body_area .child_sidebar ul li a:hover {
+    color: #9a0a84;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#body_area .child_sidebar a.tag-cloud-link {
+    background: #262626;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+#body_area .child_sidebar a.tag-cloud-link:hover {
+    background: #ea1a70;
+}
+
+
 
 /* 
 ===========================
@@ -293,33 +396,132 @@ Navigation  Area Css
     background-color: #510524
 }
 
-/* 
-===========================
-Footer Area Css
-============================
-*/
 
 
-#footer_area {
-    background-color: #4b4b4e;
-    color: #ddd;
-    padding: 20px 0;
-}
+/*===========================================
+  Error page Styling
+===========================================*/
 
-#footer_area p {
-    margin: 0;
-    font-size: 15px;
-    color: #ffffff;
+#error_page {
     text-align: center;
 }
 
-#footer_area a {
+#error_page p {
     color: #ea1a70;
+}
+
+#error_page h1 {
+    margin-bottom: 30px;
+}
+
+#s {
+    border: 1px solid #dddd;
+}
+
+#searchsubmit {
+    background: #ea1a70;
+    border: 1px solid #ea1a70;
+    color: white;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+#searchsubmit:hover {
+    background: #5e052a;
+    border-color: #5e052a;
 
 }
 
-#footer_area a {
-    color: #fffdfe;
+#error_page .error_search_form {
+    margin-bottom: 20px;
+}
+
+.homepage {
+    background: #ea1a70;
+    color: white;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    padding: 10px;
+    text-transform: uppercase;
+
+}
+
+.homepage:hover {
+    background: rgb(99, 6, 54);
+    text-decoration: none;
+    color: white;
+
+}
+
+/*===========================================
+  Footer Area Styling
+===========================================*/
+#footer {
+    background: #292929;
+    padding: 40px 0 20px;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#footer .child_sidebar h3 {
+    border-left: 4px solid #ea1a70;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#footer .child_sidebar ul {
+    list-style: none;
+}
+
+#footer .child_sidebar ul ul {
+    display: none;
+}
+
+#footer .child_sidebar ul li a {
+    color: rgb(255, 255, 255);
+}
+
+#menu-menu-1 {
+    list-style: none;
+}
+
+#footer .wp-element-button {
+    background: #ea1a70;
+    border: none;
+    color: white;
+    transition: 0.5s;
+    position: relative;
+    right: 20px;
+}
+
+#footer .wp-element-button:hover {
+    background: #840439;
+}
+
+
+/*===========================================
+    Copyright Area Styling
+  ===========================================*/
+#copyright_area {
+    background: #292929;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+#copyright_area p {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+#copyright_area p a {
+    color: #ffffff;
+}
+
+#copyright_area p a:hover {
+    color: #ea1a70;
     text-decoration: underline;
 
 }

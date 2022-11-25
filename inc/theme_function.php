@@ -41,6 +41,34 @@ function anik_customizer_register($wp_customize)
 
     ));
 
+
+    // Theme Color
+    $wp_customize->add_section('anik_colors', array(
+        'title' => __('Theme Color ', 'anikroy'),
+        'description' => 'If need you can change your theme color.',
+    ));
+
+
+    $wp_customize->add_setting('anik_bg_color', array(
+        'default' => '#ffffff',
+    ));
+    $wp_customize->add_control(new WP_Customize_color_control($wp_customize, 'anik_bg_color', array(
+        'label' => 'Background Color',
+        'section' => 'anik_colors',
+        'settings' => 'anik_bg_color',
+    )));
+
+    $wp_customize->add_setting('anik_primary_color', array(
+        'default' => '#ea1a70',
+    ));
+    $wp_customize->add_control(new WP_Customize_color_control($wp_customize, 'anik_primary_color', array(
+        'label' => 'Primary Color',
+        'section' => 'anik_colors',
+        'settings' => 'anik_primary_color',
+    )));
+
+
+
     // Footer option
     $wp_customize->add_section("anik_footer_option", array(
         'title' => __('footer Option', 'anikroy'),
@@ -60,3 +88,21 @@ function anik_customizer_register($wp_customize)
 
 
 add_action('customize_register', 'anik_customizer_register');
+
+function anik_theme_color_customization()
+{
+?>
+    <style>
+        body {
+            background: <?php echo get_theme_mod('anik_bg_color'); ?>
+        }
+
+        :root {
+            --pink: <?php echo get_theme_mod('anik_primary_color'); ?>
+        }
+    </style>
+<?php
+}
+
+
+add_action('wp_head',  'anik_theme_color_customization');
