@@ -23,7 +23,7 @@ function custom_service()
         'show_ui' => true,
         'capability_type' => 'post',
         'rewrite' => array('slag' => 'service'),
-        'supports' => array('title', 'thumbnail', 'editor',),
+        'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
     ));
 }
 

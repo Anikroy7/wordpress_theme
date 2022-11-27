@@ -9,6 +9,7 @@ add_theme_support('post-thumbnails', array('page', 'post', 'service'));
 
 // Thumbnail Size
 add_image_size('post-thumbnails', 2000, 350, true);
+add_image_size('service', 400, 200, true);
 
 
 // Except to 40 words

@@ -53,6 +53,19 @@ a.readmore:hover {
 
 }
 
+.button {
+    background: var(--pink);
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #5e052a;
+}
+
 /*=======================================
    Notice Area Style
   ========================================*/
@@ -523,5 +536,22 @@ Navigation  Area Css
 #copyright_area p a:hover {
     color: #ea1a70;
     text-decoration: underline;
+
+}
+
+
+/* Style for service area */
+
+#service_area {
+    padding: 60px;
+    margin: 0;
+}
+
+#service_area .child_service {
+    background-color: #ddd;
+    box-shadow: 0 0 10px #ddd;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
 
 }
